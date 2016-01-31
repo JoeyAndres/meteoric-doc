@@ -61,6 +61,14 @@ header, main, footer {
   }
 }
 
+#index-banner {
+  background: $primary-color;
+
+  .header {
+    color: white;
+  }
+}
+
 .header {
   color: $primary-color;
 }

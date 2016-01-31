@@ -88,10 +88,19 @@ Template.Home.onRendered(function() {
         .on("scrollSpy:exit", this.scrollspy_list_cb);
 
     this.$('.virtual-mobile-device > div').pushpin({
-        top: $('.virtual-mobile-device').offset().top,
+        top: this.$('.virtual-mobile-device').offset().top,
         offset: 20
     });
-    this.hide_sub_side_nav()
+    this.hide_sub_side_nav();
+
+    // icon click
+    this.$('ul#nav-mobile li.search .search-wrapper i.material-icons').click(() => {
+        if (this.$('.search-results .focused').length) {
+            this.$('.search-results .focused').first()[0].click();
+        } else if ($('.search-results').children().length) {
+            this.$('.search-results').children().first()[0].click();
+        }
+    });
 });
 
 Template.Home.helpers({

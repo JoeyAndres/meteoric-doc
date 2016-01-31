@@ -1,8 +1,19 @@
 <template name="PageLayout">
     <body>
-    {{> Header}}
 
-    <main>{{> yield}}</main>
+    <main>
+        <div class="section" id="index-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m9">
+                        <h1 class="header center-on-small-only">{{> AppNameVersion}}</h1>
+                        <h4 class ="light red-text text-lighten-4 center-on-small-only">Mobile framework for Meteor</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{> yield}}
+    </main>
 
     {{>Footer}}
     </body>
