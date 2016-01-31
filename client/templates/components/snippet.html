@@ -1,0 +1,10 @@
+<template name="Snippet">
+    <div class="card hoverable">
+        {{#if title}}
+            <div class="valign-wrapper {{title_classes}} valign-wrapper">
+                <h6 class="center-align col s12">{{title}}</h6>
+            </div>
+        {{/if}}
+        <div class="code-container {{container_classes}}">{{> UI.contentBlock}}</div>
+    </div>
+</template>

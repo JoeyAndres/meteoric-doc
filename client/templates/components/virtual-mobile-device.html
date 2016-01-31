@@ -1,0 +1,18 @@
+<template name="VirtualMobileDevice">
+    <div class="virtual-mobile-device-container row">
+        <div class="platform-switcher switch col s12">
+            <label>
+                <i class="fa fa-2x fa-apple"></i>
+                <input disabled type="checkbox">
+                <span class="lever"></span>
+                <i class="fa fa-2x fa-android"></i>
+            </label>
+        </div>
+
+        <div class="device col s12">
+            <iframe class="device-content"
+                    border=0
+                    src='{{src}}'></iframe>
+        </div>
+    </div>
+</template>

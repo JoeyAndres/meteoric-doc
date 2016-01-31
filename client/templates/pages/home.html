@@ -1,0 +1,47 @@
+<template name="Home">
+    <aside>
+        <ul class="side-nav fixed table-of-contents" id="side-nav">
+            <li><a href="#header" class="waves-effect waves-teal">Header</a></li>
+            <li><a href="#content" class="waves-effect waves-teal">Content</a></li>
+            <li><a href="#footer" class="waves-effect waves-teal">Footer</a></li>
+            <li class="bold">
+                <a class="waves-effect waves-teal" href="#buttons">Buttons</a>
+                <div>
+                    <ul id="side-nav-buttons">
+                        <li><a href="#buttons-block">Block</a></li>
+                        <li><a href="#buttons-full-width">Full Width</a></li>
+                        <li><a href="#buttons-different-sizes">Different Sizes</a></li>
+                        <li><a href="#buttons-outlined">Outlined</a></li>
+                        <li><a href="#buttons-clear">Clear</a></li>
+                        <li><a href="#buttons-icons">Icons</a></li>
+                        <li><a href="#buttons-header-and-footers">Headers/Footers</a></li>
+                        <li><a href="#buttons-button-bar">Button Bar</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </aside>
+    <div class="row">
+        <div class="content col s12 m8">
+            <div id="header" class="section scrollspy-main">{{> ComponentHeader}}</div>
+            <div id="content" class="section scrollspy-main">{{> ComponentContent}}</div>
+            <div id="footer" class="section scrollspy-main">{{> ComponentFooter}}</div>
+            <div id="buttons" class="section scrollspy-main">
+                {{> ComponentButtons}}
+
+                <div id="buttons-block" class="section scrollspy-buttons">{{> ComponentButtonBlock}}</div>
+                <div id="buttons-full-width" class="section scrollspy-buttons">{{> ComponentButtonFullWidth}}</div>
+                <div id="buttons-different-sizes" class="section scrollspy-buttons">{{> ComponentButtonDifferentSizes}}</div>
+                <div id="buttons-outlined" class="section scrollspy-buttons">{{> ComponentButtonOutlined}}</div>
+                <div id="buttons-clear" class="section scrollspy-buttons">{{> ComponentButtonClear}}</div>
+                <div id="buttons-icons" class="section scrollspy-buttons">{{> ComponentButtonIcons}}</div>
+                <div id="buttons-header-and-footers" class="section scrollspy-buttons">{{> ComponentButtonHeadersFooters}}</div>
+                <div id="buttons-button-bar" class="section scrollspy-buttons">{{> ComponentButtonBar}}</div>
+            </div>
+        </div>
+
+        <aside class="col hide-on-small-only m3 virtual-mobile-device">
+            <div>{{> VirtualMobileDevice src=device_src}}</div>
+        </aside>
+    </div>
+</template>

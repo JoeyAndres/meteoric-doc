@@ -1,0 +1,62 @@
+@import "ionic";
+
+@import "{poetic:materialize-scss}/sass/components/_color.scss";
+
+@import "{poetic:materialize-scss}/sass/components/_variables.scss";
+$sidenav-item-height: 32px;
+$navbar-height: 120px;
+$navbar-brand-font-size: 3em;
+
+@import "{poetic:materialize-scss}/sass/materialize.scss";
+
+header, main, footer {
+  padding-left: 240px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+.code-container {
+  background-color: color("grey", "lighten-3");
+  padding: 1em;
+}
+
+.content .section {
+  padding-top: 20px;
+  min-height: 320px;
+  padding-bottom: 60px;
+}
+
+.virtual-mobile-device-container {
+  width: 324px;
+  box-sizing: content-box;
+
+  text-align: center;
+  .platform-switcher {
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .device {
+    width: 324px;
+    box-sizing: content-box;
+
+    @include border-radius(10px);
+    padding: 20px;
+    background: color("grey", "darken-2");
+
+    iframe {
+      width: 324px;
+      height: 577px;
+    }
+  }
+}

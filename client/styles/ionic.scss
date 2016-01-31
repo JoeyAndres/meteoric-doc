@@ -1,0 +1,38 @@
+.ionic {
+  all: initial;
+
+  // variables.
+  @import
+  '{seba:ionic-sass}/scss/_variables',
+  '{seba:ionic-sass}/scss/_mixins',
+
+    // Base
+  '{seba:ionic-sass}/scss/_reset',
+    //@import '{seba:ionic-sass}/scss/_scaffolding';
+  '{seba:ionic-sass}/scss/_type',
+
+    // Components
+  "{seba:ionic-sass}/scss/action-sheet",
+  "{seba:ionic-sass}/scss/backdrop",
+  "{seba:ionic-sass}/scss/bar",
+  "{seba:ionic-sass}/scss/tabs",
+  "{seba:ionic-sass}/scss/menu",
+  "{seba:ionic-sass}/scss/modal",
+  "{seba:ionic-sass}/scss/popover",
+  "{seba:ionic-sass}/scss/popup",
+  "{seba:ionic-sass}/scss/loading",
+  "{seba:ionic-sass}/scss/items",
+  "{seba:ionic-sass}/scss/list",
+  "{seba:ionic-sass}/scss/badge",
+  "{seba:ionic-sass}/scss/slide-box",
+  "{seba:ionic-sass}/scss/refresher",
+  "{seba:ionic-sass}/scss/spinner";
+
+  .relativy {
+    position: relative;  // It is absolute by default which we don't want in demo.
+  }
+
+  .bar {
+    @extend .relativy;
+  }
+}
