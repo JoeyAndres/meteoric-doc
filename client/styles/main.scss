@@ -36,9 +36,12 @@ header, main, footer {
   padding-bottom: 60px;
 }
 
-.virtual-mobile-device-container {
+div.virtual-mobile-device-container {
   width: 324px;
   box-sizing: content-box;
+
+  // So that when virtual-mobile-device-container is position: fixed, it doesn't move horizontally.
+  &.row { margin-left: 0; }
 
   text-align: center;
   .platform-switcher {
