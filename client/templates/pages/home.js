@@ -5,6 +5,7 @@ Template.Home.onCreated(function() {
     _.extend(this, {
         hide_sub_side_nav: () => {
             this.$('#side-nav-buttons').hide();
+            this.$('#side-nav-list').hide();
         },
 
         scrollspy_main_cb: e => {
