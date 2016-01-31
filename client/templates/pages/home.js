@@ -69,6 +69,26 @@ Template.Home.onCreated(function() {
 
         scrollspy_list_cb: e => {
             let active_nav = this.$('#side-nav-list > li > a.active').get(0);
+            switch(active_nav) {
+                case this.$("a[href='#list-divider']").get(0):
+                    this.device_src.set(`${base_url}/lists/dividers`);
+                    break;
+                case this.$("a[href='#list-icons']").get(0):
+                    this.device_src.set(`${base_url}/lists/icons`);
+                    break;
+                case this.$("a[href='#list-buttons']").get(0):
+                    this.device_src.set(`${base_url}/lists/buttons`);
+                    break;
+                case this.$("a[href='#list-avatars']").get(0):
+                    this.device_src.set(`${base_url}/lists/avatars`);
+                    break;
+                case this.$("a[href='#list-thumbnails']").get(0):
+                    this.device_src.set(`${base_url}/lists/thumbnails`);
+                    break;
+                case this.$("a[href='#list-inset-lists']").get(0):
+                    this.device_src.set(`${base_url}/lists/inset-lists`);
+                    break;
+            }
         }
     });
 });
