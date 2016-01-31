@@ -25,8 +25,14 @@ Template.Home.onCreated(function() {
                     this.device_src.set(`${base_url}/footer`);
                     break;
                 case this.$("a[href='#buttons']").get(0):
+                    this.hide_sub_side_nav();
                     this.device_src.set(`${base_url}/buttons`);
                     this.$('#side-nav-buttons').show();
+                    break;
+                case this.$("a[href='#list']").get(0):
+                    this.hide_sub_side_nav();
+                    this.device_src.set(`${base_url}/lists`);
+                    this.$('#side-nav-list').show();
                     break;
             }
         },
@@ -59,6 +65,10 @@ Template.Home.onCreated(function() {
                     this.device_src.set(`${base_url}/buttons/bar`);
                     break;
             }
+        },
+
+        scrollspy_list_cb: e => {
+            let active_nav = this.$('#side-nav-list > li > a.active').get(0);
         }
     });
 });
@@ -72,6 +82,10 @@ Template.Home.onRendered(function() {
     this.$('.scrollspy-buttons').scrollSpy()
         .on("scrollSpy:enter", this.scrollspy_buttons_cb)
         .on("scrollSpy:exit", this.scrollspy_buttons_cb);
+
+    this.$('.scrollspy-list').scrollSpy()
+        .on("scrollSpy:enter", this.scrollspy_list_cb)
+        .on("scrollSpy:exit", this.scrollspy_list_cb);
 
     this.$('.virtual-mobile-device > div').pushpin({
         top: $('.virtual-mobile-device').offset().top,
