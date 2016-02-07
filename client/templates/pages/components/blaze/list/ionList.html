@@ -1,0 +1,89 @@
+<template name="ComponentBlazeList">
+    <h2 class="header">ionList</h2>
+
+    <p>
+        The List is a widely used interface element in almost any mobile app, and can include
+        content ranging from basic text all the way to buttons, toggles, icons, and thumbnails.
+
+    </p>
+    <p>
+        Both the list, which contains items, and the list items themselves can be any HTML
+        element. The containing element requires the <code>list</code> class and each list item requires
+        the <code>item</code> class.
+    </p>
+    <p>
+        However, using the <code>ionList</code> and <code>ionItem</code> template make it easy to support various
+        interaction modes such as swipe to edit, drag to reorder, and removing items.
+    </p>
+
+    <br>
+
+    <h5>Basic Usage:</h5>
+    {{#Snippet}}{{{basic_snippet}}}{{/Snippet}}
+
+    <br>
+
+    <h5>Advance Usage:</h5>
+    {{#Snippet}}{{{advance_blaze_snippet}}}{{/Snippet}}
+    {{#Snippet}}{{{advance_js_snippet}}}{{/Snippet}}
+
+    <br>
+
+    <h5>API</h5>
+    <table class="bordered highlight responsible-table">
+        <thead>
+        <tr>
+            <th>Attr</th>
+            <th>Type</th>
+            <th>Details</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>showDelete</td>
+            <td><code>boolean</code></td>
+            <td>Set this to <code>true</code> to show the <code>ionDeleteButton</code> in <code>ionItem</code>. Otherwise false.</td>
+        </tr>
+        <tr>
+            <td>showReorder</td>
+            <td><code>boolean</code></td>
+            <td>Set this to <code>true</code> to show the <code>ionReorderButton</code> in <code>ionItem</code>, allowing reordering of items. Otherwise false.</td>
+        </tr>
+        <tr>
+            <td>canSwipe</td>
+            <td><code>boolean</code></td>
+            <td>Set this to <code>true</code> to allow the swiping of <code>ionContent</code>, exposing the <code>ionOptions</code>. Otherwise false.</td>
+        </tr>
+        <tr>
+            <td>onReorder</td>
+            <td><code>function</code></td>
+            <td>
+                <p>
+                    Set this to a function that will be called when reordering occurs.
+                    Since items usually correspond with a model, use this callback to
+                    change the order of entries in your model.
+                </p>
+                <ul class="collection with-header">
+                    <li class="collection-header"><h5>Parameters:</h5></li>
+                    <li class="collection-item">
+                        <code>item:</code>
+                        <span>Template instance of the item being reordered. This is a good place for retrieving data from the item being reordered. Probably not needed, but its there.</span>
+                    </li>
+                    <li class="collection-item">
+                        <code>fromIndex:</code>
+                        <span>The index of the item prior to reordering.</span>
+                    </li>
+                    <li class="collection-item">
+                        <code>toIndex:</code>
+                        <span>The new index of the item.</span>
+                    </li>
+                </ul>
+
+                <p>
+                    Generally, what you want is to reorder the backend (e.g. the collection) as a result.
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</template>

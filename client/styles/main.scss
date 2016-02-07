@@ -75,3 +75,7 @@ div.virtual-mobile-device-container {
 .header {
   color: $primary-color;
 }
+
+.waves-color {
+  @extend .waves-red;
+}

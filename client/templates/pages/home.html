@@ -4,69 +4,102 @@
             class="side-nav fixed table-of-contents">
             <img src="meteoric-ionic.svg" class="logo"
                  style="width: 200px; margin: 20px;"/>
-            <li><a href="#header" class="waves-effect waves-teal">Header</a></li>
-            <li><a href="#content" class="waves-effect waves-teal">Content</a></li>
-            <li><a href="#footer" class="waves-effect waves-teal">Footer</a></li>
+            <li><h6>Overview</h6></li>
+            <li><a href="#css-installation" class="waves-effect waves-color">Installation</a></li>
+            <li><a href="#css-css-sass" class="waves-effect waves-color">CSS/SASS</a></li>
+            <li><a href="#css-about-meteoric" class="waves-effect waves-color">About Meteoric</a></li>
+            <li><h6>CSS Components</h6></li>
+            <li><a href="#css-header" class="waves-effect waves-color">Header</a></li>
+            <li><a href="#css-content" class="waves-effect waves-color">Content</a></li>
+            <li><a href="#css-footer" class="waves-effect waves-color">Footer</a></li>
             <li class="bold">
-                <a class="waves-effect waves-teal" href="#buttons">Buttons</a>
+                <a class="waves-effect waves-color" href="#css-buttons">Buttons</a>
                 <div>
-                    <ul id="side-nav-buttons">
-                        <li><a href="#buttons-block">Block</a></li>
-                        <li><a href="#buttons-full-width">Full Width</a></li>
-                        <li><a href="#buttons-different-sizes">Different Sizes</a></li>
-                        <li><a href="#buttons-outlined">Outlined</a></li>
-                        <li><a href="#buttons-clear">Clear</a></li>
-                        <li><a href="#buttons-icons">Icons</a></li>
-                        <li><a href="#buttons-header-and-footers">Headers/Footers</a></li>
-                        <li><a href="#buttons-button-bar">Button Bar</a></li>
+                    <ul id="side-nav-css-buttons">
+                        <li><a href="#css-buttons-block">Block</a></li>
+                        <li><a href="#css-buttons-full-width">Full Width</a></li>
+                        <li><a href="#css-buttons-different-sizes">Different Sizes</a></li>
+                        <li><a href="#css-buttons-outlined">Outlined</a></li>
+                        <li><a href="#css-buttons-clear">Clear</a></li>
+                        <li><a href="#css-buttons-icons">Icons</a></li>
+                        <li><a href="#css-buttons-header-and-footers">Headers/Footers</a></li>
+                        <li><a href="#css-buttons-button-bar">Button Bar</a></li>
                     </ul>
                 </div>
             </li>
             <li class="bold">
-                <a class="waves-effect waves-teal" href="#list">List</a>
+                <a class="waves-effect waves-color" href="#css-list">List</a>
                 <div>
-                    <ul id="side-nav-list">
-                        <li><a href="#list-divider">Divider</a></li>
-                        <li><a href="#list-icons">Icons</a></li>
-                        <li><a href="#list-buttons">Buttons</a></li>
-                        <li><a href="#list-avatars">Avatars</a></li>
-                        <li><a href="#list-thumbnails">Thumbnails</a></li>
-                        <li><a href="#list-inset-lists">Inset Lists</a></li>
+                    <ul id="side-nav-css-list">
+                        <li><a href="#css-list-divider">Divider</a></li>
+                        <li><a href="#css-list-icons">Icons</a></li>
+                        <li><a href="#css-list-buttons">Buttons</a></li>
+                        <li><a href="#css-list-avatars">Avatars</a></li>
+                        <li><a href="#css-list-thumbnails">Thumbnails</a></li>
+                        <li><a href="#css-list-inset-lists">Inset Lists</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><h6>Blaze Components</h6></li>
+            <li class="bold">
+                <a href="#blaze-list" class="waves-effect waves-color">Lists</a>
+                <div>
+                    <ul id="side-nav-blaze-list">
+                        <li><a href="#blaze-list-ionList">ionList</a></li>
+                        <li><a href="#blaze-list-ionItem">ionItem</a></li>
+                        <li><a href="#blaze-list-ionItemContent">ionItemContent</a></li>
+                        <li><a href="#blaze-list-ionItemOptions">ionItemOptions</a></li>
+                        <li><a href="#blaze-list-ionOptionButton">ionOptionButton</a></li>
+                        <li><a href="#blaze-list-ionDeleteButton">ionDeleteButton</a></li>
+                        <li><a href="#blaze-list-ionReorderButton">ionReorderButton</a></li>
                     </ul>
                 </div>
             </li>
         </ul>
     </aside>
     <div class="row">
-        <div class="content col s7">
-            <div id="header" class="section scrollspy-main">{{> ComponentHeader}}</div>
-            <div id="content" class="section scrollspy-main">{{> ComponentContent}}</div>
-            <div id="footer" class="section scrollspy-main">{{> ComponentFooter}}</div>
-            <div id="buttons" class="section scrollspy-main">
-                {{> ComponentButtons}}
+        <div class="content col l7 s12">
+            <div id="css-installation" class="section scrollspy-main">{{> ComponentInstallation}}</div>
+            <div id="css-css-sass" class="section scrollspy-main">{{> ComponentCSSSASS}}</div>
+            <div id="css-about-meteoric" class="section scrollspy-main">{{> ComponentAbout}}</div>
 
-                <div id="buttons-block" class="section scrollspy-buttons">{{> ComponentButtonBlock}}</div>
-                <div id="buttons-full-width" class="section scrollspy-buttons">{{> ComponentButtonFullWidth}}</div>
-                <div id="buttons-different-sizes" class="section scrollspy-buttons">{{> ComponentButtonDifferentSizes}}</div>
-                <div id="buttons-outlined" class="section scrollspy-buttons">{{> ComponentButtonOutlined}}</div>
-                <div id="buttons-clear" class="section scrollspy-buttons">{{> ComponentButtonClear}}</div>
-                <div id="buttons-icons" class="section scrollspy-buttons">{{> ComponentButtonIcons}}</div>
-                <div id="buttons-header-and-footers" class="section scrollspy-buttons">{{> ComponentButtonHeadersFooters}}</div>
-                <div id="buttons-button-bar" class="section scrollspy-buttons">{{> ComponentButtonBar}}</div>
+            <div id="css-header" class="section scrollspy-main">{{> ComponentCssHeader}}</div>
+            <div id="css-content" class="section scrollspy-main">{{> ComponentCssContent}}</div>
+            <div id="css-footer" class="section scrollspy-main">{{> ComponentCssFooter}}</div>
+            <div id="css-buttons" class="section scrollspy-main">
+                {{> ComponentCssButtons}}
+
+                <div id="css-buttons-block" class="section scrollspy-css-buttons">{{> ComponentCssButtonBlock}}</div>
+                <div id="css-buttons-full-width" class="section scrollspy-css-buttons">{{> ComponentCssButtonFullWidth}}</div>
+                <div id="css-buttons-different-sizes" class="section scrollspy-css-buttons">{{> ComponentCssButtonDifferentSizes}}</div>
+                <div id="css-buttons-outlined" class="section scrollspy-css-buttons">{{> ComponentCssButtonOutlined}}</div>
+                <div id="css-buttons-clear" class="section scrollspy-css-buttons">{{> ComponentCssButtonClear}}</div>
+                <div id="css-buttons-icons" class="section scrollspy-css-buttons">{{> ComponentCssButtonIcons}}</div>
+                <div id="css-buttons-header-and-footers" class="section scrollspy-css-buttons">{{> ComponentCssButtonHeadersFooters}}</div>
+                <div id="css-buttons-button-bar" class="section scrollspy-css-buttons">{{> ComponentCssButtonBar}}</div>
             </div>
-            <div id="list" class="section scrollspy-main">
-                {{> ComponentList}}
+            <div id="css-list" class="section scrollspy-main">
+                {{> ComponentCssList}}
 
-                <div id="list-divider" class="section scrollspy-list">{{> ComponentListDivider}}</div>
-                <div id="list-icons" class="section scrollspy-list">{{> ComponentListIcons}}</div>
-                <div id="list-buttons" class="section scrollspy-list">{{> ComponentListButtons}}</div>
-                <div id="list-avatars" class="section scrollspy-list">{{> ComponentListAvatars}}</div>
-                <div id="list-thumbnails" class="section scrollspy-list">{{> ComponentListThumbnails}}</div>
-                <div id="list-inset-lists" class="section scrollspy-list">{{> ComponentListInsetLists}}</div>
+                <div id="css-list-divider" class="section scrollspy-css-list">{{> ComponentCssListDivider}}</div>
+                <div id="css-list-icons" class="section scrollspy-css-list">{{> ComponentCssListIcons}}</div>
+                <div id="css-list-buttons" class="section scrollspy-css-list">{{> ComponentCssListButtons}}</div>
+                <div id="css-list-avatars" class="section scrollspy-css-list">{{> ComponentCssListAvatars}}</div>
+                <div id="css-list-thumbnails" class="section scrollspy-css-list">{{> ComponentCssListThumbnails}}</div>
+                <div id="css-list-inset-lists" class="section scrollspy-css-list">{{> ComponentCssListInsetLists}}</div>
+            </div>
+            <div id="blaze-list" class="section scrollspy-main">
+                <div id="blaze-list-ionList" class="section scrollspy-blaze-list">{{> ComponentBlazeList}}</div>
+                <div id="blaze-list-ionItem" class="section scrollspy-blaze-list">{{> ComponentBlazeListionItem}}</div>
+                <div id="blaze-list-ionItemContent" class="section scrollspy-blaze-list">{{> ComponentBlazeListionItemContent}}</div>
+                <div id="blaze-list-ionItemOptions" class="section scrollspy-blaze-list">{{> ComponentBlazeListionItemOptions}}</div>
+                <div id="blaze-list-ionOptionButton" class="section scrollspy-blaze-list">{{> ComponentBlazeListionOptionButton}}</div>
+                <div id="blaze-list-ionDeleteButton" class="section scrollspy-blaze-list">{{> ComponentBlazeListionDeleteButton}}</div>
+                <div id="blaze-list-ionReorderButton" class="section scrollspy-blaze-list">{{> ComponentBlazeListionReorderButton}}</div>
             </div>
         </div>
 
-        <aside class="col s4 virtual-mobile-device">
+        <aside class="col l5 hide-on-med-and-down virtual-mobile-device">
             <div>{{> VirtualMobileDevice src=device_src}}</div>
         </aside>
     </div>
