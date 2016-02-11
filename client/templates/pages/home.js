@@ -40,7 +40,7 @@ Template.Home.onCreated(function() {
         },
 
         scrollspy_buttons_cb: e => {
-            let active_nav = this.$('#css-side-nav-buttons > li > a.active').get(0);
+            let active_nav = this.$('#side-nav-css-buttons > li > a.active').get(0);
             switch(active_nav) {
                 case this.$("a[href='#css-buttons-block']").get(0):
                     this.device_src.set(`${base_url}/buttons/block`);
@@ -70,7 +70,7 @@ Template.Home.onCreated(function() {
         },
 
         scrollspy_list_cb: e => {
-            let active_nav = this.$('#css-side-nav-list > li > a.active').get(0);
+            let active_nav = this.$('#side-nav-css-list > li > a.active').get(0);
             switch(active_nav) {
                 case this.$("a[href='#css-list-divider']").get(0):
                     this.device_src.set(`${base_url}/lists/dividers`);
