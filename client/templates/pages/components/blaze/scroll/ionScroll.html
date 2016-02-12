@@ -1,0 +1,72 @@
+<template name="ComponentBlazeScrollionScroll">
+    <h2 class="header">ionScroll</h2>
+
+    <p>Creates a scrollable container for all content inside.</p>
+
+    <h5>Usage</h5>
+    {{#Snippet}}{{{snippet_1}}}{{/Snippet}}
+
+    <br>
+
+    <h5>API</h5>
+    <table class="bordered highlight responsible-table">
+        <thead>
+        <tr>
+            <th>Attr</th>
+            <th>Type</th>
+            <th>Details</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>direction</td>
+            <td><code>string</code></td>
+            <td>Which way to scroll. 'x'or 'y' or 'xy'. Default 'y'.</td>
+        </tr>
+        <tr>
+            <td>locking</td>
+            <td><code>boolean</code></td>
+            <td>
+                Whether to lock scrolling in one direction at a time.
+                Useful to set to false when zoomed in or scrolling in two directions.
+                Default true.
+            </td>
+        </tr>
+        <tr>
+            <td>paging (wip)</td>
+            <td><code>boolean</code></td>
+            <td>Whether to scroll with paging.</td>
+        </tr>
+        <tr>
+            <td>scrollBarX</td>
+            <td><code>boolean</code></td>
+            <td>Whether to show the horizontal scrollbar. Default true.</td>
+        </tr>
+        <tr>
+            <td>scrollBarY</td>
+            <td><code>boolean</code></td>
+            <td>Whether to show the vertical scrollbar. Default true.</td>
+        </tr>
+        <tr>
+            <td>zooming</td>
+            <td><code>boolean</code></td>
+            <td>Whether to support pinch-to-zoom</td>
+        </tr>
+        <tr>
+            <td>minZoom</td>
+            <td><code>integer</code></td>
+            <td>The smallest zoom amount allowed (default is 0.5)</td>
+        </tr>
+        <tr>
+            <td>maxZoom</td>
+            <td><code>integer</code></td>
+            <td>The largest zoom amount allowed (default is 3)</td>
+        </tr>
+        <tr>
+            <td>hasBouncing</td>
+            <td><code>boolean</code></td>
+            <td>Whether to allow scrolling to bounce past the edges of the content. <s>Defaults to true on iOS, false on Android.</s></td>
+        </tr>
+        </tbody>
+    </table>
+</template>

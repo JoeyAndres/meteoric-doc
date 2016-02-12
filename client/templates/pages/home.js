@@ -8,6 +8,7 @@ Template.Home.onCreated(function() {
             this.$('#side-nav-css-list').hide();
 
             this.$('#side-nav-blaze-list').hide();
+            this.$('#side-nav-blaze-scroll').hide();
         },
 
         scrollspy_main_cb: e => {
@@ -35,6 +36,10 @@ Template.Home.onCreated(function() {
                 case this.$("a[href='#blaze-list']").get(0):
                     this.device_src.set(`${base_url}/lists/complex`);
                     this.$('#side-nav-blaze-list').show();
+                    break;
+                case this.$("a[href='#blaze-scroll']").get(0):
+                    this.device_src.set(`${base_url}/scroll`);
+                    this.$('#side-nav-blaze-scroll').show();
                     break;
             }
         },
@@ -95,6 +100,15 @@ Template.Home.onCreated(function() {
 
         scrollspy_blaze_list_cb: e => {
             // defaults to /lists/complex
+        },
+
+        scrollspy_blaze_scroll_cb: e => {
+            let active_nav = this.$('#side-nav-blaze-scroll > li > a.active').get(0);
+
+            switch (active_nav) {
+                case this.$("a[href='#blaze-scroll-ionScroll']").get(0):
+                    this.device_src.set(`${base_url}/scroll`);
+            }
         }
     });
 });
@@ -116,6 +130,10 @@ Template.Home.onRendered(function() {
     this.$('.scrollspy-blaze-list').scrollSpy()
         .on("scrollSpy:enter", this.scrollspy_blaze_list_cb)
         .on("scrollSpy:exit", this.scrollspy_blaze_list_cb);
+
+    this.$('.scrollspy-blaze-scroll').scrollSpy()
+        .on("scrollSpy:enter", this.scrollspy_blaze_scroll_cb)
+        .on("scrollSpy:exit", this.scrollspy_blaze_scroll_cb);
 
     this.$('.virtual-mobile-device > div').pushpin({
         top: this.$('.virtual-mobile-device').offset().top,
