@@ -1,0 +1,36 @@
+Template.ComponentBlazeSideMenusionSideMenus.helpers({
+   snippet_1: function() {
+       return marked(["```handlebars",
+           `{{#ionSideMenus}}`,
+           ``,
+           `  {{#ionSideMenu}}`,
+           `    <div class="bar bar-header bar-dark">`,
+           `      <h1 class="title">Left Menu</h1>`,
+           `    </div>`,
+           `    <div class="content has-header">`,
+           `      <div class="list">`,
+           `        <div class="item item-icon-right" data-ion-menu-close>`,
+           `          Close Me {{> ionIcon icon="ios-arrow-right"}}`,
+           `        </div>`,
+           `      </div>`,
+           `    </div>`,
+           `  {{/ionSideMenu}}`,
+           ``,
+           `  {{#ionSideMenu side="right"}}`,
+           `    <div class="bar bar-header bar-dark">`,
+           `      <h1 class="title">Right Menu</h1>`,
+           `    </div>`,
+           `    <div class="content has-header">`,
+           `      <div class="list">`,
+           `        <div class="item item-icon-left" data-ion-menu-close>`,
+           `          {{> ionIcon icon="ios-arrow-left"}} Close Me`,
+           `        </div>`,
+           `      </div>`,
+           `    </div>`,
+           `  {{/ionSideMenu}}`,
+           ``,
+           `{{/ionSideMenus}}`,
+           "```"
+       ].join("\n"));
+   }
+});

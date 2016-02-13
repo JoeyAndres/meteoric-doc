@@ -9,6 +9,7 @@ Template.Home.onCreated(function() {
 
             this.$('#side-nav-blaze-list').hide();
             this.$('#side-nav-blaze-scroll').hide();
+            this.$('#side-nav-blaze-side-menu').hide();
         },
 
         scrollspy_main_cb: e => {
@@ -40,6 +41,10 @@ Template.Home.onCreated(function() {
                 case this.$("a[href='#blaze-scroll']").get(0):
                     this.device_src.set(`${base_url}/scroll`);
                     this.$('#side-nav-blaze-scroll').show();
+                    break;
+                case this.$("a[href='#blaze-side-menu']").get(0):
+                    this.device_src.set(`${base_url}/sidemenu`);
+                    this.$('#side-nav-blaze-side-menu').show();
                     break;
             }
         },
@@ -109,6 +114,10 @@ Template.Home.onCreated(function() {
                 case this.$("a[href='#blaze-scroll-ionScroll']").get(0):
                     this.device_src.set(`${base_url}/scroll`);
             }
+        },
+
+        scrollspy_blaze_side_menu_cb: e => {
+            // defaults to /sidemenu
         }
     });
 });
@@ -134,6 +143,10 @@ Template.Home.onRendered(function() {
     this.$('.scrollspy-blaze-scroll').scrollSpy()
         .on("scrollSpy:enter", this.scrollspy_blaze_scroll_cb)
         .on("scrollSpy:exit", this.scrollspy_blaze_scroll_cb);
+
+    this.$('.scrollspy-blaze-side-menu').scrollSpy()
+        .on("scrollSpy:enter", this.scrollspy_blaze_side_menu_cb)
+        .on("scrollSpy:exit", this.scrollspy_blaze_side_menu_cb);
 
     this.$('.virtual-mobile-device > div').pushpin({
         top: this.$('.virtual-mobile-device').offset().top,

@@ -1,0 +1,48 @@
+<template name="ComponentBlazeSideMenusionSideMenuContainer">
+    <h2 class="header">ionSideMenuContainer</h2>
+
+    <p>
+        Encapsulates all the side menu components.
+    </p>
+
+    <br>
+
+    <h5>Usage:</h5>
+    {{#Snippet}}{{{snippet_1}}}{{/Snippet}}
+
+    <br>
+
+    <h5>API</h5>
+    <table class="bordered highlight responsible-table">
+        <thead>
+        <tr>
+            <th>Attr</th>
+            <th>Type</th>
+            <th>Details</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>side</td>
+            <td><code>string</code></td>
+            <td>
+                Which side is available. "left" enable the left side menu. "right" opens right side menu.
+                "both" enables both left and right side menu. Defaults to "both".
+            </td>
+        </tr>
+        <tr>
+            <td>dragContent</td>
+            <td><code>boolean</code></td>
+            <td>
+                Set to true to enable dragging of header and/or content to expose side menus.
+                False will disable that. Defaults to true.
+            </td>
+        </tr>
+        <tr>
+            <td>hasBouncing</td>
+            <td><code>boolean</code></td>
+            <td>Set to true to enable the bouncing effect. Otherwise false. Defaults to true.</td>
+        </tr>
+        </tbody>
+    </table>
+</template>
