@@ -1,0 +1,51 @@
+<template name="ComponentBlazeScrollionInfiniteScroll">
+    <h2 class="header">ionInfiniteScroll</h2>
+
+    <p>The ionInfiniteScroll directive allows you to call a function whenever
+        the user gets to the bottom of the page or near the bottom of the page.</p>
+
+    <p>
+        The function you pass in for <code>onInfinite</code> is called when the user scrolls
+        greater than <code>distance</code> away from the bottom of the content. Once <code>onInfinite</code>
+        is done loading new data, it should trigger the <code>scroll.infiniteScrollComplete</code>
+        event from your controller (see below example).
+    </p>
+
+    <h5>Usage</h5>
+    {{#Snippet}}{{{snippet_1}}}{{/Snippet}}
+    {{#Snippet}}{{{snippet_2}}}{{/Snippet}}
+    <br>
+
+    <h5>API</h5>
+    <table class="bordered highlight responsible-table">
+        <thead>
+        <tr>
+            <th>Attr</th>
+            <th>Type</th>
+            <th>Details</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>onInfinite</td>
+            <td><code>function</code></td>
+            <td>What to call when the scroller reaches the bottom.</td>
+        </tr>
+        <tr>
+            <td>distance</td>
+            <td><code>string</code></td>
+            <td>The distance from the bottom that the scroll must reach to trigger the on-infinite expression. Default: 1%.</td>
+        </tr>
+        <tr>
+            <td>spinner</td>
+            <td><code>string</code></td>
+            <td>The <code>ionSpinner</code> to show while loading.</td>
+        </tr>
+        <tr>
+            <td>immediateCheck</td>
+            <td><code>boolean</code></td>
+            <td>Whether to check the infinite scroll bounds immediately on load. Specifically, it calls onInfinite despite not having to scroll. Defaults to true.</td>
+        </tr>
+        </tbody>
+    </table>
+</template>

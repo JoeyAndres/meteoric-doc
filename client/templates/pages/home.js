@@ -113,6 +113,10 @@ Template.Home.onCreated(function() {
             switch (active_nav) {
                 case this.$("a[href='#blaze-scroll-ionScroll']").get(0):
                     this.device_src.set(`${base_url}/scroll`);
+                    break;
+                case this.$("a[href='#blaze-scroll-ionInfiniteScroll']").get(0):
+                    this.device_src.set(`${base_url}/lists/ionInfinitescroll`);
+                    break;
             }
         },
 
