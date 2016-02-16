@@ -4,126 +4,61 @@
             class="side-nav fixed table-of-contents">
             <img src="meteoric-ionic.svg" class="logo"
                  style="width: 200px; margin: 20px;"/>
-            <li><h6>Overview</h6></li>
-            <li><a href="#css-installation" class="waves-effect waves-color">Installation</a></li>
-            <li><a href="#css-css-sass" class="waves-effect waves-color">CSS/SASS</a></li>
-            <li><a href="#css-about-meteoric" class="waves-effect waves-color">About Meteoric</a></li>
-            <li><h6>CSS Components</h6></li>
-            <li><a href="#css-header" class="waves-effect waves-color">Header</a></li>
-            <li><a href="#css-content" class="waves-effect waves-color">Content</a></li>
-            <li><a href="#css-footer" class="waves-effect waves-color">Footer</a></li>
-            <li class="bold">
-                <a class="waves-effect waves-color" href="#css-buttons">Buttons</a>
-                <div>
-                    <ul id="side-nav-css-buttons">
-                        <li><a href="#css-buttons-block">Block</a></li>
-                        <li><a href="#css-buttons-full-width">Full Width</a></li>
-                        <li><a href="#css-buttons-different-sizes">Different Sizes</a></li>
-                        <li><a href="#css-buttons-outlined">Outlined</a></li>
-                        <li><a href="#css-buttons-clear">Clear</a></li>
-                        <li><a href="#css-buttons-icons">Icons</a></li>
-                        <li><a href="#css-buttons-header-and-footers">Headers/Footers</a></li>
-                        <li><a href="#css-buttons-button-bar">Button Bar</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="bold">
-                <a class="waves-effect waves-color" href="#css-list">List</a>
-                <div>
-                    <ul id="side-nav-css-list">
-                        <li><a href="#css-list-divider">Divider</a></li>
-                        <li><a href="#css-list-icons">Icons</a></li>
-                        <li><a href="#css-list-buttons">Buttons</a></li>
-                        <li><a href="#css-list-avatars">Avatars</a></li>
-                        <li><a href="#css-list-thumbnails">Thumbnails</a></li>
-                        <li><a href="#css-list-inset-lists">Inset Lists</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><h6>Blaze Components</h6></li>
-            <li class="bold">
-                <a href="#blaze-list" class="waves-effect waves-color">Lists</a>
-                <div>
-                    <ul id="side-nav-blaze-list">
-                        <li><a href="#blaze-list-ionList">ionList</a></li>
-                        <li><a href="#blaze-list-ionItem">ionItem</a></li>
-                        <li><a href="#blaze-list-ionItemContent">ionItemContent</a></li>
-                        <li><a href="#blaze-list-ionItemOptions">ionItemOptions</a></li>
-                        <li><a href="#blaze-list-ionOptionButton">ionOptionButton</a></li>
-                        <li><a href="#blaze-list-ionDeleteButton">ionDeleteButton</a></li>
-                        <li><a href="#blaze-list-ionReorderButton">ionReorderButton</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="bold">
-                <a href="#blaze-scroll" class="waves-effect waves-color">Scroll</a>
-                <div>
-                    <ul id="side-nav-blaze-scroll">
-                        <li><a href="#blaze-scroll-ionScroll">ionScroll</a></li>
-                        <li><a href="#blaze-scroll-ionInfiniteScroll">ionInfiniteScroll</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="bold">
-                <a href="#blaze-side-menu" class="waves-effect waves-color">Side Menus</a>
-                <div>
-                    <ul id="side-nav-blaze-side-menu">
-                        <li><a href="#blaze-side-menu-ionSideMenuContainer">ionSideMenuContainer</a></li>
-                        <li><a href="#blaze-side-menu-ionSideMenus">ionSideMenus</a></li>
-                        <li><a href="#blaze-side-menu-ionSideMenu">ionSideMenu</a></li>
-                    </ul>
-                </div>
-            </li>
         </ul>
     </aside>
     <div class="row">
-        <div class="content col l7 s12">
-            <div id="css-installation" class="section scrollspy-main">{{> ComponentInstallation}}</div>
-            <div id="css-css-sass" class="section scrollspy-main">{{> ComponentCSSSASS}}</div>
-            <div id="css-about-meteoric" class="section scrollspy-main">{{> ComponentAbout}}</div>
+        <div class="content col l7 s12" data-section="main">
+            <div data-section="overview">
+                <div data-section="installation" class="section">{{> ComponentInstallation}}</div>
+                <div data-section="css/sass" class="section">{{> ComponentCSSSASS}}</div>
+                <div data-section="about" class="section">{{> ComponentAbout}}</div>
+            </div>
+            <div data-section="css" data-side-nav-collapse>
+                <div data-section="header" class="section">{{> ComponentCssHeader}}</div>
+                <div data-section="content" class="section">{{> ComponentCssContent}}</div>
+                <div data-section="footer" class="section">{{> ComponentCssFooter}}</div>
+                <div data-section="buttons" class="section" data-side-nav-collapse>
+                    {{> ComponentCssButtons}}
 
-            <div id="css-header" class="section scrollspy-main">{{> ComponentCssHeader}}</div>
-            <div id="css-content" class="section scrollspy-main">{{> ComponentCssContent}}</div>
-            <div id="css-footer" class="section scrollspy-main">{{> ComponentCssFooter}}</div>
-            <div id="css-buttons" class="section scrollspy-main">
-                {{> ComponentCssButtons}}
+                    <div data-section="block" class="section">{{> ComponentCssButtonBlock}}</div>
+                    <div data-section="full-width" class="section">{{> ComponentCssButtonFullWidth}}</div>
+                    <div data-section="sizes" class="section">{{> ComponentCssButtonDifferentSizes}}</div>
+                    <div data-section="outlined" class="section">{{> ComponentCssButtonOutlined}}</div>
+                    <div data-section="clear" class="section">{{> ComponentCssButtonClear}}</div>
+                    <div data-section="icons" class="section">{{> ComponentCssButtonIcons}}</div>
+                    <div data-section="headers/footers" class="section">{{> ComponentCssButtonHeadersFooters}}</div>
+                    <div data-section="bar" class="section">{{> ComponentCssButtonBar}}</div>
+                </div>
+                <div data-section="list" class="section" data-side-nav-collapse>
+                    {{> ComponentCssList}}
 
-                <div id="css-buttons-block" class="section scrollspy-css-buttons">{{> ComponentCssButtonBlock}}</div>
-                <div id="css-buttons-full-width" class="section scrollspy-css-buttons">{{> ComponentCssButtonFullWidth}}</div>
-                <div id="css-buttons-different-sizes" class="section scrollspy-css-buttons">{{> ComponentCssButtonDifferentSizes}}</div>
-                <div id="css-buttons-outlined" class="section scrollspy-css-buttons">{{> ComponentCssButtonOutlined}}</div>
-                <div id="css-buttons-clear" class="section scrollspy-css-buttons">{{> ComponentCssButtonClear}}</div>
-                <div id="css-buttons-icons" class="section scrollspy-css-buttons">{{> ComponentCssButtonIcons}}</div>
-                <div id="css-buttons-header-and-footers" class="section scrollspy-css-buttons">{{> ComponentCssButtonHeadersFooters}}</div>
-                <div id="css-buttons-button-bar" class="section scrollspy-css-buttons">{{> ComponentCssButtonBar}}</div>
+                    <div data-section="divider" class="section">{{> ComponentCssListDivider}}</div>
+                    <div data-section="icons" class="section">{{> ComponentCssListIcons}}</div>
+                    <div data-section="buttons" class="section">{{> ComponentCssListButtons}}</div>
+                    <div data-section="avatars" class="section">{{> ComponentCssListAvatars}}</div>
+                    <div data-section="thumbnails" class="section">{{> ComponentCssListThumbnails}}</div>
+                    <div data-section="lists" class="section">{{> ComponentCssListInsetLists}}</div>
+                </div>
             </div>
-            <div id="css-list" class="section scrollspy-main">
-                {{> ComponentCssList}}
-
-                <div id="css-list-divider" class="section scrollspy-css-list">{{> ComponentCssListDivider}}</div>
-                <div id="css-list-icons" class="section scrollspy-css-list">{{> ComponentCssListIcons}}</div>
-                <div id="css-list-buttons" class="section scrollspy-css-list">{{> ComponentCssListButtons}}</div>
-                <div id="css-list-avatars" class="section scrollspy-css-list">{{> ComponentCssListAvatars}}</div>
-                <div id="css-list-thumbnails" class="section scrollspy-css-list">{{> ComponentCssListThumbnails}}</div>
-                <div id="css-list-inset-lists" class="section scrollspy-css-list">{{> ComponentCssListInsetLists}}</div>
-            </div>
-            <div id="blaze-list" class="section scrollspy-main">
-                <div id="blaze-list-ionList" class="section scrollspy-blaze-list">{{> ComponentBlazeList}}</div>
-                <div id="blaze-list-ionItem" class="section scrollspy-blaze-list">{{> ComponentBlazeListionItem}}</div>
-                <div id="blaze-list-ionItemContent" class="section scrollspy-blaze-list">{{> ComponentBlazeListionItemContent}}</div>
-                <div id="blaze-list-ionItemOptions" class="section scrollspy-blaze-list">{{> ComponentBlazeListionItemOptions}}</div>
-                <div id="blaze-list-ionOptionButton" class="section scrollspy-blaze-list">{{> ComponentBlazeListionOptionButton}}</div>
-                <div id="blaze-list-ionDeleteButton" class="section scrollspy-blaze-list">{{> ComponentBlazeListionDeleteButton}}</div>
-                <div id="blaze-list-ionReorderButton" class="section scrollspy-blaze-list">{{> ComponentBlazeListionReorderButton}}</div>
-            </div>
-            <div id="blaze-scroll" class="section scrollspy-main">
-                <div id="blaze-scroll-ionScroll" class="section scrollspy-blaze-scroll">{{> ComponentBlazeScrollionScroll}}</div>
-                <div id="blaze-scroll-ionInfiniteScroll" class="section scrollspy-blaze-scroll">{{> ComponentBlazeScrollionInfiniteScroll}}</div>
-            </div>
-            <div id="blaze-side-menu" class="section scrollspy-main">
-                <div id="blaze-side-menu-ionSideMenuContainer" class="section scrollspy-blaze-side-menu">{{> ComponentBlazeSideMenusionSideMenuContainer}}</div>
-                <div id="blaze-side-menu-ionSideMenus" class="section scrollspy-blaze-side-menu">{{> ComponentBlazeSideMenusionSideMenus}}</div>
-                <div id="blaze-side-menu-ionSideMenu" class="section scrollspy-blaze-side-menu">{{> ComponentBlazeSideMenusionSideMenu}}</div>
+            <div data-section="blaze" data-side-nav-collapse>
+                <div data-section="list" class="section" data-side-nav-collapse>
+                    <div data-section="ionList" class="section">{{> ComponentBlazeList}}</div>
+                    <div data-section="ionItem" class="section">{{> ComponentBlazeListionItem}}</div>
+                    <div data-section="ionItemContent" class="section">{{> ComponentBlazeListionItemContent}}</div>
+                    <div data-section="ionItemOptions" class="section">{{> ComponentBlazeListionItemOptions}}</div>
+                    <div data-section="ionOptionButton" class="section">{{> ComponentBlazeListionOptionButton}}</div>
+                    <div data-section="ionDeleteButton" class="section">{{> ComponentBlazeListionDeleteButton}}</div>
+                    <div data-section="ionReorderButton" class="section">{{> ComponentBlazeListionReorderButton}}</div>
+                </div>
+                <div data-section="scroll" class="section" data-side-nav-collapse>
+                    <div data-section="ionScroll" class="section">{{> ComponentBlazeScrollionScroll}}</div>
+                    <div data-section="ionInfiniteScroll" class="section">{{> ComponentBlazeScrollionInfiniteScroll}}</div>
+                </div>
+                <div data-section="side-menu" class="section" data-side-nav-collapse>
+                    <div data-section="ionSideMenuContainer" class="section">{{> ComponentBlazeSideMenusionSideMenuContainer}}</div>
+                    <div data-section="ionSideMenus" class="section">{{> ComponentBlazeSideMenusionSideMenus}}</div>
+                    <div data-section="ionSideMenu" class="section">{{> ComponentBlazeSideMenusionSideMenu}}</div>
+                </div>
             </div>
         </div>
 
